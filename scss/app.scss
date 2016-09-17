@@ -1,1 +1,11 @@
-@import 'bootstrap.css';
+@import "customVariables";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+
+.form_container {
+  text-align: center;
+  width:50%;
+  margin: 0 auto;
+}
+.form_container_wrapper {
+  text-align: center;
+}
