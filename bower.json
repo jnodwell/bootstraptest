@@ -1,0 +1,17 @@
+{
+  "name": "bootstraptest",
+  "description": "grunt bower sass node bootstrap dev project",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "bootstraptest.dev",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7"
+  }
+}
