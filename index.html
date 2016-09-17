@@ -19,20 +19,26 @@
 <h1 class="home_h1">Bootstrap Dev Test</h1>
 <div class="form_container_wrapper">
     <div class="form_container">
-        <form>
-            <div class=""form-group">
-                <label for="get_primes" class=""control-label">Get How Many Primes?</label>
-                <input type="text" class="form-control" id="get_primes" name="get_primes_qty" placeholder="1000">
+        <form id="prime_form" method="post" action="get_primes.php" role="form">
+            <div class="controls">
+                <div class=""form-group">
+                    <label for="get_primes" class=""control-label">Get How Many Primes?</label>
+                    <input type="text" class="form-control" id="get_primes" name="get_primes_qty" placeholder="1000">
+                </div>
+                <div class="form-group"> <!-- Submit button !-->
+                    <input type="submit" class="btn btn-success btn-send" value="Submit">
+                </div>
             </div>
-            <div class="form-group"> <!-- Submit button !-->
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
+            <div class="messages"></div>
         </form>
     </div>
 </div>
+
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="scripts/jquery/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="scripts/bootstrap-sass/bootstrap.min.js"></script>
+<!-- Include scripts -->
+<script src="get_primes.js"></script>
 </body>
 </html>
