@@ -8,9 +8,18 @@
 
 //set the message and encode it and return it
 $start = 2;
-$count = isset($_POST['get_primes_qty']) ? $_POST['get_primes_qty'] : 1000;
-$response = implode(', ', nextPrimes($start,$count));
-$responseArray = array('type' => 'success', 'message' => $response);
+if (!filter_var($_POST['get_primes_qty'], FILTER_VALIDATE_INT) === false) {
+    $count = $_POST['get_primes_qty'];
+    $type = 'success';
+} else {
+    $count = 100;
+    $type = 'warning';
+}
+if ($count > 1000) {
+    $count = 100;
+}
+$response = $count . " Primes<br />" . implode(', ', nextPrimes($start,$count));
+$responseArray = array('type' => $type, 'message' => $response);
 if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
     $encoded = json_encode($responseArray);
     header('Content-Type: application/json');
