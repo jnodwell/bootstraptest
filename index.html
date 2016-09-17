@@ -16,14 +16,15 @@
     <![endif]-->
 </head>
 <body>
-<h1 class="home_h1">Bootstrap Dev Test</h1>
+<h1 class="home_h1 text-center">Bootstrap Dev Test</h1>
+<p class="text-center">Enter the number of primes you would like generated, and click Submit. You must enter a number before clicking Submit or nothing exciting will happen. <br />If you're feeling lazy, we prefilled the blank with a good number for you.</p>
 <div class="form_container_wrapper">
     <div class="form_container">
         <form id="prime_form" method="post" action="get_primes.php" role="form">
             <div class="controls">
                 <div class=""form-group">
                     <label for="get_primes" class=""control-label">Get How Many Primes?</label>
-                    <input type="text" class="form-control" id="get_primes" name="get_primes_qty" placeholder="1000">
+                    <input type="text" class="form-control" id="get_primes" name="get_primes_qty" placeholder="1000" value="1000">
                 </div>
                 <div class="form-group"> <!-- Submit button !-->
                     <input type="submit" class="btn btn-success btn-send" value="Submit">
