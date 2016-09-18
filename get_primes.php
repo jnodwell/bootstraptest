@@ -18,6 +18,7 @@ if (!filter_var($_POST['get_primes_qty'], FILTER_VALIDATE_INT) === false) {
 if ($count > 1000) {
     $count = 100;
 }
+$count = abs($count);
 $response = $count . " Primes<br />" . implode(', ', nextPrimes($start,$count));
 $responseArray = array('type' => $type, 'message' => $response);
 if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {

@@ -17,7 +17,7 @@
 </head>
 <body>
 <h1 class="home_h1 text-center">Bootstrap Dev Test</h1>
-<p class="text-center">Enter the number of primes you would like generated, and click Submit. You must enter a number before clicking Submit or nothing exciting will happen. <br />If you're feeling lazy, we prefilled the blank with a good number for you. If you're feeling obnoxious and you want to generate more than 1000 prime numbers, sadly, you must look elsewhere. This site won't work that hard and won't return more than 1000, no matter how many you ask for.</p>
+<p class="text-center">Enter the number of primes you would like generated, and click Submit. You must enter a number before clicking Submit or nothing exciting will happen. <br />If you're feeling lazy, we prefilled the blank with a good number for you. If you're feeling obnoxious and you want to generate more than 1000 prime numbers, sadly, you must look elsewhere. This site won't work that hard and won't return more than 1000, no matter how many you ask for (and probably not more than 100).</p>
 <div class="form_container_wrapper">
     <div class="form_container">
         <form id="prime_form" method="post" action="get_primes.php" role="form">
@@ -34,7 +34,8 @@
         </form>
     </div>
 </div>
-
+<p>You cannot have a negative number of primes. This server is quite positive and will proceed as if your number is also.<br />
+Normally, your list appears in a green box. If your box is orange, shame, shame, shame on you!</p>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="scripts/jquery/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
